@@ -1,0 +1,33 @@
+{
+  "name": "cronometro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serforin0/cronometro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/serforin0/cronometro/issues"
+  },
+  "homepage": "https://github.com/serforin0/cronometro#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.17.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11"
+  }
+}
