@@ -18,15 +18,15 @@ export async function getChronometer(req, res) {
     }
 }
 
-export async function getoneChronometer(req, res) {
+export async function getOneChronometer(req, res) {
     const { id } = req.params;
 
-    const project = await Project.findOne({ 
+    const chronometer = await Chronometer.findOne({ 
         where: {
             id: id
         }
     });
-    res.json(project);
+    res.json(chronometer);
 }
 export async function createChronometer(req, res) {
     const { name, hous, mins, secs, projectid } = req.body;
