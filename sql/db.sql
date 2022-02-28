@@ -12,6 +12,8 @@ CREATE TABLE IF NOT EXISTS chronometers(
     hous integer NOT NULL,
     mins integer NOT NULL,
     secs integer NOT NULL,
+    createdAt date,
+    updatedAt date,
     projectid integer REFERENCES projects(id)
 );
 

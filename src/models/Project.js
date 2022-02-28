@@ -25,6 +25,6 @@ import Chronometer from './Chronometer';
 });
 
 Project.hasMany(Chronometer, { foreingKey: 'projectid', sourceKey: 'id'});
-Chronometer.belongsTo()
+Chronometer.belongsTo(Project, { foreingKey: 'projectid', sourceKey: 'id'})
 
 export default Project;

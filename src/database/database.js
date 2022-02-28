@@ -7,12 +7,14 @@ export const sequelize = new Sequelize(
     {
         host: 'localhost',
         dialect: 'postgres',
+        quoteIdentifiers:false,
+        underscored:true,
         pool: {
             max: 5,
             min: 0,
             require: 30000,
             idle: 10000
         },
-        //logging: false
+        logging: false
     }
 )

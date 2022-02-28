@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize';
 import { sequelize } from '../database/database';
 
- const Chronometer = sequelize.define('projects', {
+ const Chronometer = sequelize.define('chronometers', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true 
@@ -18,11 +18,17 @@ import { sequelize } from '../database/database';
     secs: {
         type: Sequelize.INTEGER
     },
+    createdAt: {
+        type: Sequelize.DATE
+    },
+    updatedAt: {
+        type: Sequelize.DATE
+    },
     projectid: {
         type: Sequelize.INTEGER
     }
 }, {
-    timestamps: false
+    timestamps: false,
 });
 
 export default Chronometer;
