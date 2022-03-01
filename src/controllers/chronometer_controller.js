@@ -1,4 +1,5 @@
 import Chronometer from "../models/Chronometer";
+import router from "../routes/project";
 
 export async function getChronometer(req, res) {
     try {
@@ -76,3 +77,15 @@ export async function deleteChronometer(req, res) {
        
     });
 }
+
+export async function getChronometerByProject(red, res) {
+    const { projectid } = res.params;
+
+    const chronometer = await Chronometer.findAll({
+        attributes: ['id', 'name', 'hous', 'mins', 'secs', 'projectid'],
+        where: { projectid }
+    });
+    res.json({chronometer});
+}
+
+router.get('/project/:proyectId', )
